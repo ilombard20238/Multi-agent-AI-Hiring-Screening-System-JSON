@@ -784,16 +784,6 @@
                 "operation": "equals",
                 "name": "filter.operator.equals"
               }
-            },
-            {
-              "id": "f79ea1d1-80be-40f1-ac05-79969bbc1c98",
-              "leftValue": "={{ $json.hr_decision }}",
-              "rightValue": "Reject",
-              "operator": {
-                "type": "string",
-                "operation": "equals",
-                "name": "filter.operator.equals"
-              }
             }
           ],
           "combinator": "and"
@@ -827,7 +817,7 @@
       "parameters": {
         "sendTo": "isabellalomb2004@gmail.com",
         "subject": "={{ \"Candidate Ready for Interview: \" + (($json[\"Name\"] || $json.candidate_name) || \"\") }}",
-        "message": "={{\n\"Hello,\\n\\n\" +\n\"The candidate \" + (($json[\"Name\"] || $json.candidate_name) || \"Applicant\") +\n\" has been approved by HR and is now ready for interview for the \" +\n(($json[\"Job\"] || $json.job) || \"position\") + \".\\n\\n\" +\n\"Best regards,\\nAI Hiring Workflow\"\n}}",
+        "message": "={{\n\"Hello,\\n\\n\" +\n\"The candidate \" + (($json[\"Name\"] || $json.candidate_name) || \"Applicant\") +\n\" is ready for review by HR \"\n}}",
         "options": {}
       },
       "type": "n8n-nodes-base.gmail",
